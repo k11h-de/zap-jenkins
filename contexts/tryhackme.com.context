@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <context>
+        <name>tryhackme.com</name>
+        <desc/>
+        <inscope>true</inscope>
+        <incregexes>(http|https)://tryhackme.com.*</incregexes>
+        <excregexes>(http|https)://tryhackme.com/exclude/(1|2)/.*</excregexes>
+        <tech>
+            <include>Db.MongoDB</include>
+            <include>Db.MySQL</include>
+            <include>Db.PostgreSQL</include>
+            <include>Db.SQLite</include>
+            <include>Language</include>
+            <include>Language.ASP</include>
+            <include>Language.C</include>
+            <include>Language.JSP/Servlet</include>
+            <include>Language.Java</include>
+            <include>Language.JavaScript</include>
+            <include>Language.PHP</include>
+            <include>Language.Python</include>
+            <include>Language.Ruby</include>
+            <include>Language.XML</include>
+            <include>OS.Linux</include>
+            <include>OS.MacOS</include>
+            <include>SCM.Git</include>
+            <include>WS.Apache</include>
+            <include>WS.Tomcat</include>
+            <exclude>Db</exclude>
+            <exclude>Db.CouchDB</exclude>
+            <exclude>Db.Firebird</exclude>
+            <exclude>Db.HypersonicSQL</exclude>
+            <exclude>Db.IBM DB2</exclude>
+            <exclude>Db.Microsoft Access</exclude>
+            <exclude>Db.Microsoft SQL Server</exclude>
+            <exclude>Db.Oracle</exclude>
+            <exclude>Db.SAP MaxDB</exclude>
+            <exclude>Db.Sybase</exclude>
+            <exclude>OS</exclude>
+            <exclude>OS.Windows</exclude>
+            <exclude>SCM</exclude>
+            <exclude>SCM.SVN</exclude>
+            <exclude>WS</exclude>
+            <exclude>WS.IIS</exclude>
+        </tech>
+        <urlparser>
+            <class>org.zaproxy.zap.model.StandardParameterParser</class>
+            <config>{"kvps":"&amp;","kvs":"=","struct":[]}</config>
+        </urlparser>
+        <postparser>
+            <class>org.zaproxy.zap.model.StandardParameterParser</class>
+            <config>{"kvps":"&amp;","kvs":"=","struct":[]}</config>
+        </postparser>
+        <authentication>
+            <type>0</type>
+        </authentication>
+        <forceduser>-1</forceduser>
+        <session>
+            <type>0</type>
+        </session>
+        <authorization>
+            <type>0</type>
+            <basic>
+                <header/>
+                <body/>
+                <logic>AND</logic>
+                <code>-1</code>
+            </basic>
+        </authorization>
+    </context>
+</configuration>

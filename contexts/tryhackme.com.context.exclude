@@ -1,0 +1,2 @@
+(http|https)://tryhackme.com/exclude/1/.*
+(http|https)://tryhackme.com/exclude/2/.*
