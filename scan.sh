@@ -116,6 +116,11 @@ docker run --name zap_${JOB_ID} -d owasp/zap2docker-stable zap.sh -daemon \
 -config scanner.threadPerHost=${THREADS_PER_HOST} \
 -config view.mode=attack \
 -config connection.dnsTtlSuccessfulQueries=-1 \
+-config connection.socksProxy.enabled=true
+-config connection.socksProxy.host=localhost
+-config connection.socksProxy.port=3128
+-config connection.socksProxy.version=5
+-config connection.socksProxy.dns=true
 -config api.addrs.addr.name=.* \
 -config api.addrs.addr.regex=true \
 -addoninstall ascanrulesBeta \
